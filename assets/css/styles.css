@@ -18,6 +18,8 @@
   --green:     #10b981;
   --blue:      #3b82f6;
   --blue-soft: #60a5fa;
+  --violet:      #8b5cf6;
+  --violet-soft: #a78bfa;
 
   --text:      #f1f5f9;
   --muted:     #93a1b8;
@@ -311,7 +313,7 @@ a { color: inherit; text-decoration: none; }
 .core-disc {
   position: relative;
   width: 124px; height: 124px;
-  border-radius: 50%;
+  border-radius: 28px;
   display: grid;
   place-items: center;
   background:
@@ -336,7 +338,7 @@ a { color: inherit; text-decoration: none; }
   animation: scan 6s linear infinite;
 }
 @keyframes scan { to { transform: rotate(360deg); } }
-.core-disc img { width: 56px; height: 56px; }
+.core-disc img { width: 104px; height: auto; border-radius: 16px; display: block; }
 .core-disc::before, .core-disc::after {
   content: "";
   position: absolute;
@@ -390,6 +392,7 @@ a { color: inherit; text-decoration: none; }
 .node--app.soon .tile { opacity: .62; }
 .node--app .tile.t-gold  { box-shadow: 0 14px 34px -12px rgba(245,158,14,0.5); border-color: rgba(245,158,14,0.4); }
 .node--app .tile.t-blue  { box-shadow: 0 14px 34px -12px rgba(59,130,246,0.5); border-color: rgba(59,130,246,0.4); }
+.node--app .tile.t-violet { box-shadow: 0 14px 34px -12px rgba(139,92,246,0.5); border-color: rgba(139,92,246,0.4); }
 
 .node--app .n-name {
   margin-top: 11px;
@@ -471,7 +474,7 @@ a { color: inherit; text-decoration: none; }
 
 .eco-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
 }
 .app-card {
@@ -527,6 +530,7 @@ a { color: inherit; text-decoration: none; }
 .tile.bg-gold { background: linear-gradient(150deg, var(--gold-soft), var(--orange)); }
 .tile.bg-blue { background: linear-gradient(150deg, var(--blue-soft), var(--blue)); }
 .tile.bg-teal { background: linear-gradient(150deg, #2dd4bf, #0d9488); }
+.tile.bg-violet { background: linear-gradient(150deg, var(--violet-soft), var(--violet)); }
 
 .app-card h3 {
   font-family: var(--font-display);
@@ -632,6 +636,9 @@ a { color: inherit; text-decoration: none; }
 /* ===========================================================
    RESPONSIVE
    =========================================================== */
+@media (max-width: 1024px) {
+  .eco-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .hero-grid { grid-template-columns: 1fr; gap: 10px; }

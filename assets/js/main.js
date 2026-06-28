@@ -101,7 +101,7 @@
   const svg = document.querySelector(".links");
   const core = document.querySelector(".node--core");
   const appNodes = Array.from(document.querySelectorAll(".node--app"));
-  const colorFor = { gold: "#f59e0e", blue: "#3b82f6", teal: "#14b8a6" };
+  const colorFor = { gold: "#f59e0e", blue: "#3b82f6", teal: "#14b8a6", violet: "#8b5cf6" };
   let lineEls = [], pulseEls = [], geo = [], revealed = false;
 
   function centerOf(el) {
@@ -236,6 +236,8 @@
       "app.arrow.desc": "Planifica, controla y da seguimiento a tus proyectos de construcción desde un solo lugar.",
       "app.budget.role": "Presupuestos de obra",
       "app.budget.desc": "Presupuestos, materiales, mano de obra e indirectos con precisión. Catálogos, revisiones y reportes listos para descargar.",
+      "app.cowork.role": "Espacios de coworking",
+      "app.cowork.desc": "Reserva y administra espacios de trabajo compartidos: miembros, salas y accesos desde un mismo lugar.",
       "app.dove.role": "Próximamente",
       "app.dove.desc": "La próxima pieza del ecosistema ARROW. Estamos construyendo algo nuevo para ti.",
       "status.live": "Activo",
@@ -274,6 +276,8 @@
       "app.arrow.desc": "Plan, control and track your construction projects from a single place.",
       "app.budget.role": "Construction budgets",
       "app.budget.desc": "Budgets, materials, labor and overhead with precision. Catalogs, revisions and reports ready to download.",
+      "app.cowork.role": "Coworking spaces",
+      "app.cowork.desc": "Book and manage shared workspaces: members, rooms and access all from one place.",
       "app.dove.role": "Coming soon",
       "app.dove.desc": "The next piece of the ARROW ecosystem. We're building something new for you.",
       "status.live": "Active",
